@@ -1,9 +1,10 @@
-import {React, useState} from 'react';
+import React from 'react';
 
-function Chrono() {
+function Chrono({minutes,seconds}) {
+    
     return(
         <>
-            Chrono
+            <span>{minutes}:{seconds}</span> 
         </>
     )
 }

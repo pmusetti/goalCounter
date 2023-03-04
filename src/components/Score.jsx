@@ -1,15 +1,53 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
 import Counter from "./Counter";
 
-function Score({local, visit}) {
+function Score() {
+
+    const [localScore, setLocalScore] = useState(0);
+    const [visitScore, setVisitScore] = useState(0);
     
+    const goalCounter = (event) =>{
+        switch (event.key) {
+
+                case '7': setLocalScore(localScore + 1);
+                    break;
+                case '1': 
+                    if(localScore > 0){
+                        setLocalScore(localScore - 1);
+                    }
+                    
+                    break;
+                case '9': setVisitScore(visitScore + 1);
+                   
+                    break;
+                case '3': 
+                    if(visitScore > 0){
+                        setVisitScore(visitScore - 1);
+                }
+                    
+                    break;
+                case '5': 
+                    setVisitScore(0);
+                    setLocalScore(0);
+                    break;
+                default:
+                    break;
+               }
+    }
+    useEffect(()=>{
+        window.addEventListener('keydown', goalCounter);
+        return () => {
+            window.removeEventListener('keydown', goalCounter);
+          }
+    })
+
     return(
 
         <div >
 
-        <Counter count={local}/>
+        <Counter count={localScore}/>
         <span> - </span>
-        <Counter count={visit}/>
+        <Counter count={visitScore}/>
 
     </div>
     )
