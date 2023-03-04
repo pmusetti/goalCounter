@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Score counter",
+  "name": "Soccer score counter",
   "icons": [
     {
       "src": "favicon.ico",
