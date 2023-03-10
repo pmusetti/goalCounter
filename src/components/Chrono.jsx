@@ -3,9 +3,9 @@ import React from 'react';
 function Chrono({minutes,seconds}) {
     
     return(
-        <>
-            <span>{minutes}:{seconds}</span> 
-        </>
+        <div className='timerContainer'>
+            <span className='timer'>{minutes}:{seconds}</span> 
+        </div>
     )
 }
 
