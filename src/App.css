@@ -56,7 +56,7 @@
 
 /********************************/
 body{
-  background-color: black;
+  background-color: rgb(8, 0, 31);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,19 +68,19 @@ body{
 }
 .score {
   color: rgb(255, 255, 255);
-  font-size: 25vw;
+  font-size: 28vw;
   font-family: digitalFont;
   margin: 0 auto;
   animation: shake 0.1s 0.1s 5 ;
 }
 .timer{
-  color: rgb(255, 175, 55);
+  color: rgb(255, 0, 0);
   font-size: 20vw;
   font-family: digitalFont;
   margin: 0 auto;
 }
 .scoreContainer{
-  
+  margin-top: 10vh;
 }
 .counterContainer{
   
